@@ -9,6 +9,18 @@ import java.awt.event.ActionListener;
 public class KalkulackaApp {
     public static void main(String[] args) {
 
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (UnsupportedLookAndFeelException e) {
+            throw new RuntimeException(e);
+        }
+
         JFrame frame = new JFrame("Kalkulačka App"); // vytvorime okno
         frame.setMinimumSize(new Dimension(400, 200));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // ked kliknem na X na okne (cize vo frame) tak sa zatvori standardne
@@ -36,7 +48,7 @@ public class KalkulackaApp {
 
 
         JButton btnNumber1 = new JButton("1"); // tlacidlo
-        btnNumber1.setBounds(100, 80, 30, 30); // x, y, sirka, vyska
+        btnNumber1.setBounds(100, 80, 40, 40); // x, y, sirka, vyska
         panel.add(btnNumber1);
 
         btnNumber1.addActionListener(new ActionListener() { // sluzi na "odchytenie" cize spracovanie zatlacenia tlacidla
@@ -47,7 +59,7 @@ public class KalkulackaApp {
 
 
         JButton btnNumber2 = new JButton("2"); // tlacidlo
-        btnNumber2.setBounds(140, 80, 30, 30); // x, y, sirka, vyska
+        btnNumber2.setBounds(140, 80, 40, 40); // x, y, sirka, vyska
         panel.add(btnNumber2);
 
         btnNumber2.addActionListener(new ActionListener() { // sluzi na "odchytenie" cize spracovanie zatlacenia tlacidla
@@ -58,7 +70,7 @@ public class KalkulackaApp {
 
 
         JButton btnPlus = new JButton("+"); // tlacidlo
-        btnPlus.setBounds(180, 80, 30, 30); // x, y, sirka, vyska
+        btnPlus.setBounds(180, 80, 40, 40); // x, y, sirka, vyska
         panel.add(btnPlus);
 
         btnPlus.addActionListener(new ActionListener() { // sluzi na "odchytenie" cize spracovanie zatlacenia tlacidla
@@ -69,7 +81,7 @@ public class KalkulackaApp {
 
 
         JButton btnRovnaSa = new JButton("="); // tlacidlo
-        btnRovnaSa.setBounds(220, 80, 30, 30); // x, y, sirka, vyska
+        btnRovnaSa.setBounds(220, 80, 40, 40); // x, y, sirka, vyska
         panel.add(btnRovnaSa);
 
         btnRovnaSa.addActionListener(new ActionListener() { // sluzi na "odchytenie" cize spracovanie zatlacenia tlacidla
@@ -87,7 +99,7 @@ public class KalkulackaApp {
 
 
         JButton btnZmaz = new JButton("C"); // tlacidlo
-        btnZmaz.setBounds(260, 80, 30, 30); // x, y, sirka, vyska
+        btnZmaz.setBounds(260, 80, 40, 40); // x, y, sirka, vyska
         panel.add(btnZmaz);
 
         btnZmaz.addActionListener(new ActionListener() { // sluzi na "odchytenie" cize spracovanie zatlacenia tlacidla
